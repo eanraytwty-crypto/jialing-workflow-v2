@@ -1,0 +1,22 @@
+﻿shot_id,beat,edit_duration_sec,visible_characters,camera,continuity_rule,needed_references,audio_post,video_engine
+01,巷道空景,5,無,固定遠景,確立1985年代與巷道左右方向,street_master.png,無對白；街道底噪,T2V 可用：無人街景
+02,母親叫回家,5,母,固定中景,母左、車停定，手扶龍頭,mother_sheet.png + street_master.png,媽：陳嘉玲，趕快上車跟我回家,I2V / R2V
+03,嘉玲拒絕,4,玲,固定中近景,嘉玲右；不得看到阿伯,jialing_sheet.png + street_master.png,玲：我不要,I2V / R2V；剪成4秒
+04,妳不是我媽,6,玲,固定特寫,看畫面左；不要移動攝影機,jialing_sheet.png,玲：妳不是我媽，妳是假的,I2V / R2V
+05,母親停頓,4,母,固定近景,純表情反應；保持光向,mother_sheet.png,安靜、呼吸,I2V / R2V；剪成4秒
+06,母親反問,5,母,固定近景,看畫面右；腳踏車不移位,mother_sheet.png,媽：我不是妳媽，那我是誰,I2V / R2V
+07,偏袒弟弟,5,玲,固定近景,咬牙、眼眶濕；不能憑空哭嚎,jialing_sheet.png,玲：妳都只偏袒弟弟,I2V / R2V
+08,妳真的想知道,6,母,固定特寫,先停頓再開口；台詞別擠進5秒,mother_sheet.png,媽：妳就真的那麼想知道嗎,I2V / R2V
+09,出生那天,6,母,固定特寫,台語第一句；一鏡一個情緒,mother_sheet.png,媽：妳從出生那天…（台語須校對）,I2V / R2V
+10,被丟在醫院,6,母,固定特寫,語氣變重，保持母親面向,mother_sheet.png,媽：妳就是被丟在醫院（台語須校對）,I2V / R2V
+11,父親堅持,6,母,固定特寫,說完突然後悔，壓住情緒,mother_sheet.png,媽：要不是妳爸堅持…（台語須校對）,I2V / R2V
+12,嘉玲沉默,9,玲,固定特寫,淚水、呼吸，不能多出第二人,jialing_sheet.png,無對白；呼吸、環境,I2V / R2V
+13,嘉玲逃跑,5,玲,固定長鏡或輕微平移,人物從畫面右側離開；母留原地,jialing_sheet.png + street_master.png,跑步腳步音後製,I2V / R2V
+14,母親後悔,8,母,固定中近景,嘉玲不得回到畫面；老人不得出現,mother_sheet.png,只保留呼吸、環境,I2V / R2V
+15,騎車尋找,7,母,固定側面遠景,自行車與方向固定；車上只能坐母親,mother_sheet.png + bicycle_prop.png,腳踏車、風聲後製,I2V；運動可用兩段分鏡
+16,河堤呼喊,7,母,固定中遠景,停車喊名字；不做推軌,mother_sheet.png + riverside_master.png,媽：陳嘉玲！,I2V / R2V
+17,河堤無人,4,無,固定極遠景,延續呼喊聲畫外音；嘉玲不可同框,riverside_master.png,喊聲殘響、蟲鳴,T2V 可用；剪成4秒
+18,隧道女孩,6,玲,固定遠景,嘉玲單獨蹲坐，無母親、無阿伯,jialing_sheet.png + tunnel_master.png,啜泣聲後製,I2V / R2V
+19,阿伯經過,5,阿伯、玲,固定中遠景,阿伯在隧道口停車，嘉玲仍蹲坐,uncle_sheet.png + tunnel_master.png,機車經過、喇叭兩聲後製,I2V / R2V
+20,阿伯詢問,4,阿伯、玲,固定中景,阿伯靠車詢問、不可變成母親,uncle_sheet.png + jialing_sheet.png,阿伯：阿妹仔，妳哪會佇遮（台語校對）,I2V / R2V；剪成4秒
+21,嘉玲最後一句,7,玲,固定特寫,只有嘉玲表情；聲音留空間、鏡頭不動,jialing_sheet.png + tunnel_master.png,玲：我媽媽不要我了,I2V / R2V
