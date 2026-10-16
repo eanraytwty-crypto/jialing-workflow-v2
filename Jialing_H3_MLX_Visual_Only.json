@@ -1,0 +1,219 @@
+{
+  "id": "c6ad69a1-a801-428a-b591-1c89d914ff00",
+  "revision": 0,
+  "last_node_id": 4,
+  "last_link_id": 2,
+  "nodes": [
+    {
+      "id": 1,
+      "type": "MiniMaxH3MLXTurbo",
+      "pos": [
+        -740,
+        0
+      ],
+      "size": [
+        550,
+        520
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": [
+            1
+          ]
+        },
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "links": null
+        },
+        {
+          "name": "stats",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "MiniMaxH3MLXTurbo"
+      },
+      "widgets_values": [
+        "EXTERIOR B-ROLL ONLY, rural Taiwan, 1985. No visible people, no speaking, no extra characters. A stationary eye-level 35 mm lens shot of an authentic narrow village street, old red brick buildings, period-appropriate signage, electric wires, warm late afternoon natural light, restrained 35 mm film texture. CAMERA LOCKED ON TRIPOD, no pan, no tilt, no dolly, no zoom, no drone, no cuts, no morphing, no modern objects. Audio: no speech, no score, no music.",
+        "4-bit-pruned",
+        "Turbo 4 Fast",
+        "auto",
+        "prequantized 8-bit",
+        "dense",
+        864,
+        480,
+        5,
+        42,
+        1.3,
+        true
+      ]
+    },
+    {
+      "id": 2,
+      "type": "CreateVideo",
+      "pos": [
+        -30,
+        40
+      ],
+      "size": [
+        320,
+        145
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 1
+        },
+        {
+          "name": "audio",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "VIDEO",
+          "type": "VIDEO",
+          "links": [
+            2
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CreateVideo"
+      },
+      "widgets_values": [
+        24,
+        8
+      ]
+    },
+    {
+      "id": 3,
+      "type": "SaveVideo",
+      "pos": [
+        350,
+        40
+      ],
+      "size": [
+        570,
+        360
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "link": 2
+        }
+      ],
+      "outputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SaveVideo"
+      },
+      "widgets_values": [
+        "Jialing_Proof/BROLL_SILENT",
+        "auto",
+        "auto"
+      ]
+    },
+    {
+      "id": 4,
+      "type": "MarkdownNote",
+      "pos": [
+        -740,
+        580
+      ],
+      "size": [
+        1210,
+        340
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "READ FIRST - this is T2V B-roll proofing, NOT character locking",
+      "properties": {},
+      "widgets_values": [
+        "# JIALING / 1985 — Visual-only approval pipeline\n\n**Purpose:** generate one controlled B-roll preview. H3 MLX node does NOT have first-frame/image/reference conditioning. Never use this graph for character continuity or dialogue.\n\n**Removed the AUDIO -> CreateVideo cable, and removed SaveAudio entirely.** H3 still internally generates sound, but the exported VIDEO receives no sound from this graph. Verify with ffprobe; some versions might behave differently.\n\n**Attention: dense** for Mac environments where sol_attn fails to compile (e.g. c10/metal/utils.h missing). Re-enable sol_attn only after a verified compile + visual regression test.\n\nReview checklist: frame count/identity/props/period accuracy/lens+movement consistency/no unexpected soundtrack on export. Reject bad takes before editing.\n\nFor protagonists: use a validated **image-conditioned I2V or R2V** engine, not this MLX T2V node."
+      ]
+    }
+  ],
+  "links": [
+    [
+      1,
+      1,
+      0,
+      2,
+      0,
+      "IMAGE"
+    ],
+    [
+      2,
+      2,
+      0,
+      3,
+      0,
+      "VIDEO"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "title": "T2V Visual Draft (B-ROLL ONLY)",
+      "bounding": [
+        -780,
+        -40,
+        710,
+        590
+      ],
+      "color": "#386b87",
+      "flags": {}
+    },
+    {
+      "id": 2,
+      "title": "SILENT VIDEO EXPORT",
+      "bounding": [
+        -60,
+        -30,
+        1050,
+        500
+      ],
+      "color": "#3d8467",
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "frontendVersion": "1.48.7",
+    "ds": {
+      "scale": 0.75,
+      "offset": [
+        850,
+        200
+      ]
+    }
+  },
+  "version": 0.4
+}
